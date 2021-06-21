@@ -1,7 +1,5 @@
-FROM clux/muslrust:1.49.0-stable
+FROM ekidd/rust-musl-builder:stable
 
 COPY entrypoint.sh /entrypoint.sh
-RUN apt-get update
-RUN apt-get install p7zip-full
 
 ENTRYPOINT ["/entrypoint.sh"]
